@@ -1,6 +1,10 @@
-import './assets/main.css'
+import { defineCustomElement } from 'vue'
+import VButton from './components/SButton.vue'
 
-import { createApp } from 'vue'
-import App from './App.vue'
+console.log(VButton.styles) // ["/* inlined css */"]
 
-createApp(App).mount('#app')
+// convert into custom element constructor
+const VButtonElement = defineCustomElement(VButton)
+
+// register
+customElements.define('v-button', VButtonElement)
