@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { ButtonOptions } from '../types'
+import { type ButtonOptions } from '../types'
 
 const props = defineProps<ButtonOptions>()
 
