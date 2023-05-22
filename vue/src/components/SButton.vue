@@ -1,6 +1,8 @@
 <template>
   <button class="btn">
-    <span v-if="icon">🤌</span> {{ label }}
+    <span v-if="icon" @click="emit('iconClicked')">🤌</span> {{ label }}
+    <!-- @slot postfix of the label -->
+    <slot></slot>
     <span v-for="item in more" :key="item"> {{ item }} </span>
   </button>
 </template>
@@ -16,9 +18,29 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { type ButtonOptions } from '../types'
 
-const props = defineProps<ButtonOptions>()
+/** @component
+This is the doc for the component.  
+How complex cna this be??  
+Another line??
+*/
+
+interface ButtonOptions {
+  /** Label of the button */
+  label: string
+  /** Shows 🤌 */
+  icon?: boolean
+  more?: string[]
+}
+
+const props = withDefaults(defineProps<ButtonOptions>(), {
+  label: 'is it working '
+})
+
+const emit = defineEmits<{
+  /** Shows emphasis  */
+  (event: 'iconClicked'): void
+}>()
 
 onMounted(() => {
   console.log('mounted...')

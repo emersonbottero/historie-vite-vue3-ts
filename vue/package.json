@@ -10,7 +10,8 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "vuedoc": "vue-docgen -c docgen.config.ts",
+    "vuedoc": "vue-docgen -c docgen.config.js",
+    "vuedoc:dev": "vue-docgen -c docgen.config.js -w",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
     "story:preview": "histoire preview"
