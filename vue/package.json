@@ -1,12 +1,22 @@
 {
-  "name": "rooot",
+  "name": "my-lib",
   "version": "0.0.0",
   "private": true,
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.js",
+      "require": "./dist/my-lib.cjs"
+    },
+    "./secondary": {
+      "import": "./dist/secondary.js",
+      "require": "./dist/secondary.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only": "vite build ",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
