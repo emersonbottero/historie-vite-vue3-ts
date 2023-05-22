@@ -11,8 +11,10 @@ export default defineConfig({
       entry: resolve(__dirname, './main.ts'),
       name: 'Vue Library',
       // the proper extensions will be added
-      fileName: 'vue-lib'
+      fileName: 'vue-lib',
+      formats: ['umd']
     },
+    outDir: 'dist/vue',
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library

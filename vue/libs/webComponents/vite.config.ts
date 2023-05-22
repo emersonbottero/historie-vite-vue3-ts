@@ -11,8 +11,10 @@ export default defineConfig({
       entry: resolve(__dirname, './main.ts'),
       name: 'WCLib',
       // the proper extensions will be added
-      fileName: 'wc-lib'
+      fileName: 'wc-lib',
+      formats: ['umd']
     },
+    outDir: 'dist/wc',
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
