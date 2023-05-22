@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   componentsRoot: 'src/components',
   components: '**/[A-Z]*.vue',
-  outDir: 'src/stories',
+  outDir: './stories',
   getDestFile: (file, config) => path.join(config.outDir, file).replace(/\.vue$/, '.story.md'),
   apiOptions: {
     addScriptHandlers: [

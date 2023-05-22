@@ -5,6 +5,6 @@
 </template>
 
 <script setup>
-import SButton from '../components/SButton.vue'
+import SButton from './src/components/SButton.vue'
 const iconList = ['🌞', '😁', '🎉']
 </script>

@@ -28,4 +28,4 @@ coverage
 *.sw?
 
 #Stories
-src/stories/*.story.md
+stories/*.story.md
