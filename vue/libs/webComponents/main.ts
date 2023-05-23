@@ -1,12 +1,12 @@
 import { defineCustomElement } from 'vue'
-import VButton from '../../src/components/SButton.vue'
+import SButton from '../../src/components/SButton.vue'
 
-console.log(VButton.styles) // ["/* inlined css */"]
+console.log(SButton.styles) // ["/* inlined css */"]
 
 // convert into custom element constructor
-const VButtonElement = defineCustomElement(VButton)
+const SButtonElement = defineCustomElement(SButton)
 
 // register
-const register = () => customElements.define('v-button', VButtonElement)
+const register = () => customElements.define('s-button', SButtonElement)
 
 export default register

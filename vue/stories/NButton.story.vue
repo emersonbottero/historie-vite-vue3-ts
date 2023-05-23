@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import NButton from './src/components/NButton.vue'
+import NButton from '../src/components/NButton.vue'
 </script>
