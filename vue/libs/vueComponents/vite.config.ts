@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
-import baseConfig from '../../vite.config'
+import baseConfig from ' ../../vite.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
       name: 'Vue Library',
       // the proper extensions will be added
       fileName: 'vue-lib',
-      formats: ['umd']
+      formats: ['es']
     },
     outDir: 'dist/vue',
     rollupOptions: {
