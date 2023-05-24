@@ -5,8 +5,7 @@ console.log(VButton.styles) // ["/* inlined css */"]
 
 // convert into custom element constructor
 const VButtonElement = defineCustomElement(VButton)
-
-// register
+/**Register a specific component */
 const register = () => customElements.define('v-button', VButtonElement)
 
 export default register
